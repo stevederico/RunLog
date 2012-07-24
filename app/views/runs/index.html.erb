@@ -9,6 +9,7 @@
   <tr>
     <th>Date</th>
     <th>Distance</th>
+    <th>Duration</th>
     <th>Description</th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
   <tr>
     <td><%= run.created_at.strftime('%m/%d/%Y') %></td>
     <td><%= run.distance %></td>
+    <td><%= run.duration %></td>
     <td><%= link_to run.description, run %></td>
     <td><%= link_to 'Edit', edit_run_path(run) %></td>
     <td><%= link_to 'Delete', run, method: :delete, data: { confirm: 'Are you sure?' } %></td>
