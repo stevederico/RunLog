@@ -1,4 +1,5 @@
 class RunsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   # GET /runs
   # GET /runs.json
   def index
