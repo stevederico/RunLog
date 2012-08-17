@@ -1,0 +1,8 @@
+-Add Bootstrap
+-Add User Login
+-Add Plans
+-Add Social
+-Add New Run from Google Maps
+-Add Calendar View
+-Convert time when entered
+-Add Settings Page
