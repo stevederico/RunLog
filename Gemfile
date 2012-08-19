@@ -12,7 +12,7 @@ gem 'pg'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+  gem 'twitter-bootstrap-rails', :github => 'seyhunak/twitter-bootstrap-rails'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -20,6 +20,14 @@ group :assets do
 end
 # gem 'libv8', '~> 3.11.8'
 gem 'jquery-rails'
+
+# group :development, :test do
+#   gem 'therubyracer'
+# end
+# 
+# group :production do
+#   gem 'therubyracer-heroku'
+# end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
