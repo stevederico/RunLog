@@ -1,6 +1,11 @@
 8/21
 Add Bootstrap
--Add User Login
+Add User Login
+-Forward to Dashboard After Login
+-Create Dashboard
+-Add Sign Up Button
+-Add Logout dropdown
+Features
 -Add Plans
 -Add Social
 -Add New Run from Google Maps

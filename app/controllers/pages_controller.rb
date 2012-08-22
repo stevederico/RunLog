@@ -1,6 +1,6 @@
-class PagesController < ActionController::Base
+class PagesController < ApplicationController
 	layout "application"
-	def index 
-		
+	def index
+
 	end
 end

@@ -11,6 +11,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
+
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -25,32 +28,43 @@
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
+
             </ul>
-            <form class="navbar-form pull-right">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Sign in</button>
-            </form>
+
+            <div>
+              <% if current_user %>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle pull-right" data-toggle="dropdown"><%= current_user.email %> <b class="caret"></b></a>
+                  <ul class="dropdown-menu pull-right">
+                    <li class="divider"></li>
+                    <li><a href="#"><%= link_to "Log out", log_out_path, class: "btn" %></a></li>
+                  </ul>
+                </li>
+
+              <% else %>
+                <%= link_to "Sign up", sign_up_path %> or
+                  <%= form_tag sessions_path, class: "navbar-form pull-right" do %>
+                  <%= text_field_tag :email, params[:email], class: "span2", placeholder: "Email" %>
+                  <%= password_field_tag :password, nil, class: "span2"%>
+                  <button type="submit" class="btn">Sign in</button>
+                  <% end %>
+              <% end %>
+            </div>
+
+
+
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
 
-  
+
   <div class = "container">
+    <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}", class: "alert" %>
+    <% end %>
+
     <%= yield %>
   </div>
 
