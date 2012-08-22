@@ -39,7 +39,7 @@
                 </ul>
                 <%= form_tag sessions_path, class: "navbar-form pull-right" do %>
                 <%= text_field_tag :email, params[:email], class: "span2", placeholder: "Email" %>
-                <%= password_field_tag :password, nil, class: "span2"%>
+                <%= password_field_tag :password, nil, class: "span2", placeholder: "Password"%>
                 <button type="submit" class="btn">Sign in</button>
                 <% end %>
 

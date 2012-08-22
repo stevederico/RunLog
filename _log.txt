@@ -3,9 +3,10 @@ Add Bootstrap
 Add User Login
 Forward to Dashboard After Login
 Add Sign Up Button
+Only show user's items
+-Add User to New Run
 -Add Logout dropdown
 -Right Align dropdown
--Only show user's items
 -Create About Page
 -Create Contact Us Page
 -Push View Details to About Page
