@@ -10,16 +10,15 @@ Fix Description Link of Run
 -Log User in After Sign Up
 -Add Sidebar to Dashboard
 
-
-
+-Dismisable flashes
 -Add Logout dropdown
 -Right Align dropdown
 -Create About Page
 -Create Contact Us Page
 -Push View Details to About Page
 -Finishing Marketing Copy
-
-Features
+-Hide About and Contact Us on Log-In
+-Add Footer
 -Add Plans
 -Add Social
 -Add New Run from Google Maps

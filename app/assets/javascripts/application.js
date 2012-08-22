@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
 //= require bootstrap
+
+$ ->
+  $(".alert, .error").on("click", (event)->
+    $(event.target).hide("slow")
+  )
