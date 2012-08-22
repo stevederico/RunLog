@@ -22,43 +22,37 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <%= link_to "RunLog", root_path, class: "brand" %>
+          <% if current_user %>
+           <%= link_to "RunLog", runs_path, class: "brand" %>
+          <% else %>
+           <%= link_to "RunLog", root_path, class: "brand" %>
+          <% end %>
+
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
-              </ul>
 
-            <div>
               <% if current_user %>
-                <ul class="nav">
-                <li class="dropdown pull-right">
-                  <a href="#" class="dropdown-toggle pull-right" data-toggle="dropdown">
-                    Account <%= current_user.email %>
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu pull-right">
-                    <li><a href="#"><%= link_to "Log out", log_out_path, class: "btn" %></a></li>
-                  </ul>
-                </li>
-              </ul>
-
-
-
-
-
+                  <li class="dropdown pull-right navbar-form pull-right">
+                    <a href="#" class="dropdown-toggle pull-right" data-toggle="dropdown">
+                      Account <%= current_user.email %>
+                      <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu pull-right navbar-form pull-right">
+                      <li><a href="#"><%= link_to "Log out", log_out_path, class: "btn" %></a></li>
+                    </ul>
+                  </li>
+                </ul>
               <% else %>
+                </ul>
+                <%= form_tag sessions_path, class: "navbar-form pull-right" do %>
+                <%= text_field_tag :email, params[:email], class: "span2", placeholder: "Email" %>
+                <%= password_field_tag :password, nil, class: "span2"%>
+                <button type="submit" class="btn">Sign in</button>
+                <% end %>
 
-                  <%= form_tag sessions_path, class: "navbar-form pull-right" do %>
-                  <%= text_field_tag :email, params[:email], class: "span2", placeholder: "Email" %>
-                  <%= password_field_tag :password, nil, class: "span2"%>
-                  <button type="submit" class="btn">Sign in</button>
-                  <% end %>
               <% end %>
-            </div>
-
-
 
           </div><!--/.nav-collapse -->
         </div>
