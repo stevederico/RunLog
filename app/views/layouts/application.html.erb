@@ -12,7 +12,6 @@
 </head>
 <body>
 
-<div class = "container">
 
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -32,7 +31,6 @@
             <ul class="nav">
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
-
               <% if current_user %>
                 <li><%= link_to "Log out", log_out_path  %></li>
               <% else %>
@@ -52,13 +50,27 @@
 
 
 
-
+  <div class = "container">
+    <div class="span3">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">DASHBOARD</li>
+        <li class="active"><a href="#">Runs</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Plans</a></li>
+        <li><a href="#">Coaches</a></li>
+      </ul>
+    </div><!--/.well -->
+  </div><!--/span-->
+   <div class = "span8">
     <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, :id => "flash_#{name}", class: "alert" %>
     <% end %>
-
     <%= yield %>
   </div>
+ </div>
+
+
 
 
 

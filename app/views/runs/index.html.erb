@@ -1,11 +1,10 @@
 <%- model_class = Run -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
-</div>
+<!-- <div class="page-header"> -->
+  <!-- <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1> -->
+<!-- </div> -->
 <table class="table table-striped">
   <thead>
     <tr>
-
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:distance) %></th>
       <th><%= model_class.human_attribute_name(:duration) %></th>
@@ -16,15 +15,15 @@
   <tbody>
     <% @runs.each do |run| %>
       <tr>
-        <td><%= link_to run.description, run_path(current_user, run) %></td>
+        <td><%= link_to run.description, run_path(run) %></td>
         <td><%= run.distance %></td>
         <td><%= run.duration %></td>
         <td><%=l run.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_run_path(current_user,run), :class => 'btn btn-mini' %>
+                      edit_run_path(run), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      run_path(current_user,run),
+                      run_path(run),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-mini btn-danger' %>

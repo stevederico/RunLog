@@ -4,7 +4,14 @@ Add User Login
 Forward to Dashboard After Login
 Add Sign Up Button
 Only show user's items
--Add User to New Run
+Add User to New Run
+Push to User Runs after Sign up
+Fix Description Link of Run
+-Log User in After Sign Up
+-Add Sidebar to Dashboard
+
+
+
 -Add Logout dropdown
 -Right Align dropdown
 -Create About Page
@@ -19,3 +26,4 @@ Features
 -Add Calendar View
 -Convert time when entered
 -Add Settings Page
+-Add Teams
