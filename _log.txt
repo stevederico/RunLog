@@ -2,9 +2,15 @@
 Add Bootstrap
 Add User Login
 Forward to Dashboard After Login
--Create Dashboard
--Add Sign Up Button
+Add Sign Up Button
 -Add Logout dropdown
+-Right Align dropdown
+-Only show user's items
+-Create About Page
+-Create Contact Us Page
+-Push View Details to About Page
+-Finishing Marketing Copy
+
 Features
 -Add Plans
 -Add Social

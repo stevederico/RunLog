@@ -5,7 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:distance) %></th>
       <th><%= model_class.human_attribute_name(:duration) %></th>
@@ -16,7 +16,6 @@
   <tbody>
     <% @runs.each do |run| %>
       <tr>
-        <td><%= link_to run.id, run_path(run) %></td>
         <td><%= link_to run.description, run_path(run) %></td>
         <td><%= run.distance %></td>
         <td><%= run.duration %></td>

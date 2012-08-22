@@ -34,16 +34,7 @@
               <li><a href="#contact">Contact</a></li>
 
               <% if current_user %>
-                  <li class="dropdown pull-right navbar-form pull-right">
-                    <a href="#" class="dropdown-toggle pull-right" data-toggle="dropdown">
-                      Account <%= current_user.email %>
-                      <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu pull-right navbar-form pull-right">
-                      <li><a href="#"><%= link_to "Log out", log_out_path, class: "btn" %></a></li>
-                    </ul>
-                  </li>
-                </ul>
+                <li><%= link_to "Log out", log_out_path  %></li>
               <% else %>
                 </ul>
                 <%= form_tag sessions_path, class: "navbar-form pull-right" do %>
