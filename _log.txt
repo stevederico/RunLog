@@ -7,11 +7,16 @@ Only show user's items
 Add User to New Run
 Push to User Runs after Sign up
 Fix Description Link of Run
--Log User in After Sign Up
--Add Sidebar to Dashboard
 
+8/22
+Removed Bootstrap Gem
+Added Login After Sign Up
+Remove Extra Flashes
+
+-Clean up Sign Up Form
+
+-Fix Sidebar to Dashboard
 -Dismisable flashes
--Add Logout dropdown
 -Right Align dropdown
 -Create About Page
 -Create Contact Us Page
@@ -26,3 +31,5 @@ Fix Description Link of Run
 -Convert time when entered
 -Add Settings Page
 -Add Teams
+
+git@heroku.com:runlog.git
