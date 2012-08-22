@@ -1,6 +1,8 @@
 RunLog::Application.routes.draw do
+  get "users/new"
+
   resources :runs
-  root :to => 'runs#index'
+  root :to => 'pages#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
