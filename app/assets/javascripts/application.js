@@ -16,6 +16,6 @@
 //= require bootstrap
 
 $ ->
-  $(".alert, .error").on("click", (event)->
+  $(".notice, .error, .alert").on("click", (event)->
     $(event.target).hide("slow")
   )
