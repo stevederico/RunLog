@@ -1,9 +1,10 @@
 class RunsController < ApplicationController
-  skip_before_filter  :verify_authenticity_token
+  # skip_before_filter  :verify_authenticity_token
   # GET /runs
   # GET /runs.json
   def index
-    @runs = current_user.runs
+    @runs = Run.all
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -42,7 +43,7 @@ class RunsController < ApplicationController
   # POST /runs.json
   def create
     @run = Run.new(params[:run])
-    @run.user_id = current_user.id
+    # @run.user_id = current_user.id
     respond_to do |format|
       if @run.save
         format.html { redirect_to @run, notice: 'Run was successfully created.' }

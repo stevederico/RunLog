@@ -12,7 +12,6 @@
 </head>
 <body>
 
-
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -21,28 +20,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <% if current_user %>
-           <%= link_to "RunLog", runs_path, class: "brand" %>
-          <% else %>
-           <%= link_to "RunLog", root_path, class: "brand" %>
-          <% end %>
 
+           <%= link_to "RunLog", root_path, class: "brand" %>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
-              <% if current_user %>
-                <li><%= link_to "Log out", log_out_path  %></li>
-              <% else %>
-                </ul>
-                <%= form_tag sessions_path, class: "navbar-form pull-right" do %>
-                <%= text_field_tag :email, params[:email], class: "span2", placeholder: "Email" %>
-                <%= password_field_tag :password, nil, class: "span2", placeholder: "Password"%>
-                <button type="submit" class="btn">Sign in</button>
-                <% end %>
-
-              <% end %>
-
+            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
